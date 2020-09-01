@@ -69,7 +69,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
-  if(message.content == '!서버') {
+  if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], m [분], s [초]");
@@ -127,6 +127,7 @@ client.on('message', (message) => {
       {name: '문아 공지보내', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
       {name: '문아 청소해', desc: '텍스트 지움'},
       {name: '문아 초대코드', desc: '해당 채널의 초대 코드 표기'},
+      {name: '문아 서버', desc: '서버 정보 표시'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
