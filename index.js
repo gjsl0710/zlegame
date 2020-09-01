@@ -208,11 +208,11 @@ client.on('message', (message) => {
     
     if(message.channel.type != 'dm' && checkPermission(message)) return
 
-    var clearLine = message.content.slice('문아 청소해 '.length);
+    var clearLine = message.content.slice('문아 청소해'.length);
     var isNum = !isNaN(clearLine)
 
     if(isNum && (clearLine <= 0 || 100 < clearLine)) {
-      message.channel.send("1부터 100까지의 숫자만 입력해주세요.")
+      message.channel.send("1부터 100까지 밖에 안된다잉 쓸때없는짓 하지마 **귀찮으니깐...**")
       return;
     } else if(!isNum) { // c @나긋해 3
       if(message.content.split('<@').length == 2) {
@@ -235,7 +235,7 @@ client.on('message', (message) => {
     } else {
       message.channel.bulkDelete(parseInt(clearLine)+1)
         .then(() => {
-          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "개의 메시지를 삭제했습니다. (이 메세지는 잠시 후에 사라집니다.)");
+          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "쓱쓱싹싹)");
         })
         .catch(console.error)
     }
