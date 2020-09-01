@@ -123,7 +123,7 @@ client.on('message', (message) => {
     let commandList = [
       {name: '문아 도움', desc: '문이봇에서 사용가능한 명령어 표시'},
       {name: '문아 핑', desc: '현재 핑 상태'},
-      {name: '문아 embed', desc: '엠베드 테스트'},
+      {name: '문아 임베드', desc: '엠베드 테스트'},
       {name: '문아 공지보내', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
       {name: '문아 청소해', desc: '텍스트 지움'},
       {name: '문아 초대코드', desc: '해당 채널의 초대 코드 표기'},
