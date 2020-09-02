@@ -178,7 +178,7 @@ client.on('message', (message) => {
         .setFooter(`https://discord.gg/XFsGtfv`)
         .setTimestamp()
   
-      embed.addField('공지: ', contents);
+      embed.addField('즐겜샵에서 전송한 메시지 입니다!: ', contents);
   
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
