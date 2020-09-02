@@ -18,7 +18,7 @@ client.on('ready', () => {
     '문아 도움 을 입력해바!',
     '메렁메렁',
     '에베베베베',
-    '아살기힘들다!',
+    '부르지마 귀찮아',
     '강제노동에서 벗어나고싶다아!!'
   ]
   let state_list_index = 1;
@@ -202,7 +202,7 @@ client.on('message', (message) => {
     } else {
       return message.reply('채널에서 실행해주세요.');
     }
-  } else if(message.content.startsWith('문아 청소해')) {
+  } else if(message.content.startsWith('문아 청소')) {
     if(message.channel.type == 'dm') {
       return message.reply('dm에서 사용할 수 없는 명령어 입니다.');
     }
