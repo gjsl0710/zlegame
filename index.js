@@ -133,6 +133,22 @@ client.on('message', (message) => {
     return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
 
+  if(message.content == '문아 스퀘어') {
+    return message.reply('**병신**');
+  }
+
+  if(message.content == '문아 롤하자') {
+    return message.reply('**너 게못하잖아**');
+  }
+
+  if(message.content == '문아 옵치하자') {
+    return message.reply('**너 브론즈잖아 난 마스터라서 ㅋ**');
+  }
+
+  if(message.content == '문아 못생겼어') {
+    return message.reply('**거울봐**');
+  }
+
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
