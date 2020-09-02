@@ -236,7 +236,7 @@ client.on('message', (message) => {
     } else {
       message.channel.bulkDelete(parseInt(clearLine)+1)
         .then(() => {
-          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "쓱쓱싹싹)");
+          AutoMsgDelete(message, `<@${message.author.id}> ` + parseInt(clearLine) + "(쓱쓱싹싹)");
         })
         .catch(console.error)
     }
