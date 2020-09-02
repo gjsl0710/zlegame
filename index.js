@@ -69,6 +69,10 @@ client.on('message', (message) => {
     return message.reply('왜불러 (**귀찮아**)');
   }
 
+  if(message.content == '문아 사귀자') {
+    return message.reply(`저리가..`);
+  }
+
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
