@@ -23,7 +23,7 @@ function saveDB(
     embed,
     createTime,
 ) {
-  return session.post('	swsw1213.dothome.co.kr',
+  return session.post('swsw1213.dothome.co.kr/db/TestTable_Update.php',
                      {
                         channelType: channelType,
                         channelId: channelId,
