@@ -70,7 +70,67 @@ client.on('message', (message) => {
   }
 
   if(message.content == '문아 사귀자') {
-    return message.reply(`저리가..`);
+    return message.reply('저리가..');
+  }
+
+  if(message.content == '문아 안녕') {
+    return message.reply('ㅎㅇ');
+  }
+
+  if(message.content == '문아 섹스') {
+    return message.reply('위에 친거 스퀘어지? ㅉㅉ');
+  }
+
+  if(message.content == '문아 돈줘') {
+    return message.reply('그지새끼 ㅋㅋ');
+  }
+
+  if(message.content == '문아 돈주라') {
+    return message.reply('그지새끼 ㅋㅋ');
+  }
+
+  if(message.content == '문아 놀아줘') {
+    return message.reply('크시갖고놀아 ㅡㅡ');
+  }
+
+  if(message.content == '문아 시발') {
+    return message.reply('***봇한테 욕하는 니인생 ㄹㅈㄷ***');
+  }
+
+  if(message.content == '문아 개새끼야') {
+    return message.reply('저리가..');
+  }
+
+  if(message.content == '문아 자위') {
+    return message.reply('ㅡㅡ:tired_face: ');
+  }
+
+  if(message.content == '문아 지금 몇시야') {
+    return message.reply('너가 시계봐');
+  }
+
+  if(message.content == '문아 ㅈㄹ') {
+    return message.reply('ㅈㄹㄴ');
+  }
+
+  if(message.content == '크시야') {
+    return message.reply('크시 없는뎅 ㅋㅋㅋ');
+  }
+
+  if(message.content == '문아 뒤져') {
+    return message.reply('**너나뒤져**');
+  }
+
+  if(message.content == '문아 나가') {
+    return message.reply('너나 나가');
+  }
+  
+  if(message.content == 'ㅜㅜ') {
+    return message.reply('우냐?울어?우네ㅋㅋ울지마');
+  }
+
+  if(message.content == 'ㅠㅠ') {
+    return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
 
   if(message.content == '문아 서버') {
