@@ -17,12 +17,12 @@ client.on('ready', () => {
   let state_list = [
     '문아 도움 을 입력해바!',
     '메렁메렁',
-    '갠적으로 스퀘어 시러합미다..',
+    '이잉?',
     '부르지마 귀찮아',
     '강제노동에서 벗어나고싶다아!!'
   ]
   let state_list_index = 1;
-  let change_delay = 30000; // 이건 초입니당. 1000이 1초입니당.
+  let change_delay = 5000; // 이건 초입니당. 1000이 1초입니당.
 
   function changeState() {
     setTimeout(() => {
@@ -133,20 +133,32 @@ client.on('message', (message) => {
     return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
 
-  if(message.content == '문아 스퀘어') {
-    return message.reply('**병신**');
+  if(message.content == '!청소 99') {
+    return message.reply('*청소하지마아ㅏㅏ');
   }
 
   if(message.content == '문아 롤하자') {
-    return message.reply('**너 게못하잖아**');
+    return message.reply('**너 개못하잖아**');
   }
 
   if(message.content == '문아 옵치하자') {
-    return message.reply('**너 브론즈잖아 난 마스터라서 ㅋ**');
+    return message.reply('티어 ㅇㄷ?');
   }
 
   if(message.content == '문아 못생겼어') {
     return message.reply('**거울봐**');
+  }
+
+  if(message.content == '문아 날씨') {
+    return message.reply('너가 검색해 ㅡㅡ');
+  }
+
+  if(message.content == 'ㅠ') {
+    return message.reply('우냐?울어?우네ㅋㅋ울지마');
+  }
+
+  if(message.content == 'ㅜ') {
+    return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
 
   if(message.content == '문아 서버') {
