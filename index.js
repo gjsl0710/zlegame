@@ -270,7 +270,7 @@ client.on('message', (message) => {
         .setFooter(`! MOON#2020`)
         .setTimestamp()
   
-      embed.addField('즐겜샵에서 전송한 메시지 입니다!: ', contents);
+      embed.addField('Split 총판샵: ', contents);
   
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
