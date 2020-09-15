@@ -267,7 +267,7 @@ client.on('message', (message) => {
       let embed = new Discord.RichEmbed()
         .setAuthor('공지보낸다아')
         .setColor('#705DA8')
-        .setFooter(`https://discord.gg/XFsGtfv`)
+        .setFooter(`! MOON#2020`)
         .setTimestamp()
   
       embed.addField('즐겜샵에서 전송한 메시지 입니다!: ', contents);
