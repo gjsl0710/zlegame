@@ -227,6 +227,23 @@ client.on('message', (message) => {
       .setColor('#705DA8')
       .setFooter(`돈줘어`)
       .setTimestamp()
+
+      message.channel.send(embed)
+  } else if(message.content == '문아 자판기') {
+    let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
+    let commandList = [
+      {name: '!목록', desc: '자판기에서 판매중인 상품 표시'},
+      {name: '!충전신청 {금액} {할말}', desc: '관리자에게 충전신청'},
+      {name: '!구매 {제품이름}', desc: '제품구매'},
+      {name: '!정보', desc: '내 정보 표시'},
+      {name: '!가입', desc: '자판기 서비스 가입'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('도움말 ^^', helpImg)
+      .setColor('#705DA8')
+      .setFooter(`돈줘어`)
+      .setTimestamp()
     
     commandList.forEach(x => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
@@ -432,6 +449,5 @@ function MessageSave(message, modify=false) {
     // })
     .catch(error => console.log(error))
 }
-
 
 client.login(token);
