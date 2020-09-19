@@ -292,7 +292,7 @@ client.on('message', (message) => {
         .setFooter(`! MOON#2020`)
         .setTimestamp()
   
-      embed.addField('Split 총판샵: ', contents);
+      embed.addField('공룡샵 본점', contents);
   
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
@@ -359,7 +359,7 @@ client.on('message', (message) => {
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
+    message.channel.send(`<@${message.author.id}> ` + "관리자 권한 필요함 ㅇㅇ")
     return true;
   } else {
     return false;
