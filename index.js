@@ -228,6 +228,11 @@ client.on('message', (message) => {
       .setFooter(`돈줘어`)
       .setTimestamp()
 
+      commandList.forEach(x => {
+        commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+      });
+  
+      embed.addField('Commands: ', commandStr); 
       message.channel.send(embed)
   } else if(message.content == '문아 자판기') {
     let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
