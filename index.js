@@ -192,7 +192,7 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == '문아 임베드') {
+  if(message.content == '문아 임베드(DB TEST PASSED)') {
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     let embed = new Discord.RichEmbed()
       .setTitle('임베드')
