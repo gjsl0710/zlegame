@@ -9,10 +9,7 @@ const welcomeChannelName = "안녕하세요";
 const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
-const http = require("http");
-setInterval(function () {
-  http.get("http://서버주소.herokuapp.com");
-}, 600000);
+
 
 client.on('ready', () => {
   console.log('켰다.');
