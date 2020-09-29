@@ -297,7 +297,7 @@ client.on('message', (message) => {
         .setFooter(`! MOON#2020`)
         .setTimestamp()
   
-      embed.addField('공룡샵 본점', contents);
+      embed.addField('대충 할말', contents);
   
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
