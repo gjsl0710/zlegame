@@ -161,6 +161,10 @@ client.on('message', (message) => {
   if(message.content == 'ㅜ') {
     return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
+  
+  if(message.content == '문아 핑') {
+    return message.reply('(퐁!) 핑 출력 테스트 : 5MS ');
+  }
 
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
@@ -193,10 +197,10 @@ client.on('message', (message) => {
     message.channel.send(embed);
   }
 
-  if(message.content == '문아 임베드(DB TEST PASSED)') {
+  if(message.content == '문아 임베드') {
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     let embed = new Discord.RichEmbed()
-      .setTitle('임베드')
+      .setTitle('임베드 (DB TEST PASSED) DB를 성공적으로 전송했습니다. PING : 5 ms 미만입니다.')
       .setURL('http://www.naver.com')
       .setAuthor('! MOON', img, 'http://www.naver.com')
       .setThumbnail(img)
@@ -208,7 +212,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('테스트 TEST', img)
+      .setFooter('명령어 및 DB를 성공적으로 불러왔습니다. :white_check_mark: ', img)
 
     message.channel.send(embed)
   } else if(message.content == '문아 도움') {
@@ -218,7 +222,7 @@ client.on('message', (message) => {
       {name: '문아 핑', desc: '현재 핑 상태'},
       {name: '문아 임베드', desc: '엠베드 테스트'},
       {name: '문아 공지보내', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
-      {name: '문아 청소해', desc: '텍스트 지움'},
+      {name: '문아 청소', desc: '텍스트 지움'},
       {name: '문아 초대코드', desc: '해당 채널의 초대 코드 표기'},
       {name: '문아 서버', desc: '서버 정보 표시'},
     ];
