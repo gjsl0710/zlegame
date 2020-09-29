@@ -13,7 +13,7 @@ const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '나 자신을 고치는중..' }, status: 'dnd' })
+  await bot.change_presence(activity=discord.Game("나자신을 고치는중.."), status=discord.Status.idle)
 
   let state_list = [
     '문아 도움 을 입력해바!',
