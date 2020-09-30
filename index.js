@@ -226,7 +226,7 @@ client.on('message', (message) => {
     message.channel.send(embed)
   } else if(message.content == '문아 도움') {
     let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
-    let commandlist: = [
+    let commandList = [
       {name: '문아 도움', desc: '문이봇에서 사용가능한 명령어 표시'},
       {name: '문아 핑', desc: '현재 핑 상태'},
       {name: '문아 임베드', desc: '엠베드 테스트'},
