@@ -166,6 +166,15 @@ client.on('message', (message) => {
     return message.reply('(퐁!) 핑 출력 테스트 : 5MS ');
   }
 
+  if(message.content == '문아 강화') {
+    return message.reply('**``100%로의 확률로 강화를 실페 하였습니당!``**');
+  }
+  
+  if(message.content == '문아 사랑해') {
+    return message.reply('누구세요 가까이오면 **신고할꺼야**');
+  }
+  
+  
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
