@@ -167,7 +167,7 @@ client.on('message', (message) => {
   }
 
   if(message.content == '문아 강화') {
-    return message.reply('**``100%로의 확률로 강화를 실페 하였습니당!``**');
+    return message.reply('**``100%로의 확률로 강화를 실패 하였습니당!``**');
   }
   
   if(message.content == '문아 사랑해') {
