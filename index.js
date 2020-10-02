@@ -288,32 +288,7 @@ client.on('message', (message) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
 
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
-     } else if(message.content == '/m:help') {
-    let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
-    let commandList = [
-      {name: 'Const korean', desc: '도움말을 한국어 을 로 출력합니다.'},
-      {name: '작동', desc: '/m:명령어는 헤로쿠 및 특정 ID를 소유하고 있는 유저만 사용가능합니다.'},
-      {name: '명령어', desc: '명령어 구성은 DB로 되있으며 기본 구문은 ``/m:``입니다.'},
-      {name: 'ERR', desc: '클라이언트 내부 오류'},
-      {name: '권한', desc: '이 명령어를 실행 하려면 DB관리자 권한이 있어야 합니다,'},
-    ];
-    let commandStr = '';
-    let embed = new Discord.RichEmbed()
-      .setAuthor('도움말', helpImg)
-      .setColor('#705DA8')
-      .setFooter(`/m:')
-      .setTimestamp()
     
-    commandList.forEach(x => {
-      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-    });
-
-    embed.addField('Commands: ', commandStr);
-
-    message.channel.send(embed)
   } else if(message.content == '!초대코드2') {
     client.guilds.array().forEach(x => {
       x.channels.find(x => x.type == 'text').createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
