@@ -304,7 +304,7 @@ client.on('message', (message) => {
     let embed = new Discord.RichEmbed()
       .setAuthor('도움말', helpImg)
       .setColor('#705DA8')
-      .setFooter(`Client')
+      .setFooter(`/m:')
       .setTimestamp()
     
     commandList.forEach(x => {
