@@ -173,6 +173,26 @@ client.on('message', (message) => {
   if(message.content == '문아 사랑해') {
     return message.reply('누구세요 가까이오면 **신고할꺼야**');
   }
+ 
+  if(message.content == '/m:heroku/deploy.Automatic') {
+    return message.reply('heroku Automatic deply Activity');
+  }
+  
+  if(message.content == '/m:deplot info') {
+    return message.reply('heroku automatic deployed.');
+  }
+ 
+  if(message.content == '/m:heroku deploy') {
+    return message.reply('ERR! Deplot for automatic!(Use ad_)Total:1/Done:0/Fail0');
+  }
+  
+  if(message.content == '/m:help') {
+    return message.reply('(Onley USE ad)메시지가 embed로 출력합니다.');
+  }
+  
+   if(message.content == '/m:activity') {
+    return message.reply('Automatic deploy activity.');
+  }
   
   
   if(message.content == '문아 서버') {
@@ -262,6 +282,29 @@ client.on('message', (message) => {
       .setAuthor('도움말 ^^', helpImg)
       .setColor('#705DA8')
       .setFooter(`돈줘어`)
+      .setTimestamp()
+    
+    commandList.forEach(x => {
+      commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+    });
+
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
+     } else if(message.content == '/m:help') {
+    let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
+    let commandList = [
+      {name: 'Const korean', desc: '도움말을 한국어 을 로 출력합니다.'},
+      {name: '작동', desc: '/m:명령어는 헤로쿠 및 특정 ID를 소유하고 있는 유저만 사용가능합니다.'},
+      {name: '명령어', desc: '명령어 구성은 DB로 되있으며 기본 구문은 ``/m:``입니다.'},
+      {name: 'ERR', desc: '클라이언트 내부 오류'},
+      {name: '권한', desc: '이 명령어를 실행 하려면 DB관리자 권한이 있어야 합니다,'},
+    ];
+    let commandStr = '';
+    let embed = new Discord.RichEmbed()
+      .setAuthor('도움말', helpImg)
+      .setColor('#705DA8')
+      .setFooter(`Client login')
       .setTimestamp()
     
     commandList.forEach(x => {
