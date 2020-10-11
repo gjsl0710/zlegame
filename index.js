@@ -161,11 +161,10 @@ client.on('message', (message) => {
     return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
 
-  if(message.content == '문아 문이봇초대') {
+if(message.content == '문아 문이봇초대') {
     return message.reply('https://discord.com/api/oauth2/authorize?client_id=755265826310979625&permissions=8&scope=bot');
   }
 
-  
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
@@ -225,7 +224,6 @@ client.on('message', (message) => {
       {name: '문아 청소해', desc: '텍스트 지움'},
       {name: '문아 초대코드', desc: '해당 채널의 초대 코드 표기'},
       {name: '문아 서버', desc: '서버 정보 표시'},
-      {name: '문아 문이봇초대', desc: '봇 초대링크'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
