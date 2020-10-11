@@ -10,16 +10,16 @@ const byeChannelName = "안녕히가세요";
 const welcomeChannelComment = "어서오세요.";
 const byeChannelComment = "안녕히가세요.";
 
-
 client.on('ready', () => {
   console.log('켰다.');
- client.user.setPresence({ game: { name: '무언가를' }, status: 'online' })
+  client.user.setPresence({ game: { name: '나 자신을 고치는중..' }, status: 'online' })
 
   let state_list = [
-    '"문아 도움" 을 처바!!',
+    '문아 도움 을 입력해바!',
     '메렁메렁',
-    '문이하고 대화도 할수있다구요?!',
-    '심심해'
+    '이잉?',
+    '부르지마 귀찮아',
+    '강제노동에서 벗어나고싶다아!!'
   ]
   let state_list_index = 1;
   let change_delay = 3000; // 이건 초입니당. 1000이 1초입니당.
@@ -38,7 +38,6 @@ client.on('ready', () => {
 
   changeState();
 });
-
 
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
@@ -161,39 +160,11 @@ client.on('message', (message) => {
   if(message.content == 'ㅜ') {
     return message.reply('우냐?울어?우네ㅋㅋ울지마');
   }
-  
-  if(message.content == '문아 핑') {
-    return message.reply('(퐁!) 핑 출력 테스트 : 5MS ');
+
+  if(message.content == '문아 문이봇초대') {
+    return message.reply('https://discord.com/api/oauth2/authorize?client_id=755265826310979625&permissions=8&scope=bot');
   }
 
-  if(message.content == '문아 강화') {
-    return message.reply('**``100%로의 확률로 강화를 실패 하였습니당!``**');
-  }
-  
-  if(message.content == '문아 사랑해') {
-    return message.reply('누구세요 가까이오면 **신고할꺼야**');
-  }
- 
-  if(message.content == '/m:heroku/deploy.Automatic') {
-    return message.reply('heroku Automatic deply Activity');
-  }
-  
-  if(message.content == '/m:deplot info') {
-    return message.reply('heroku automatic deployed.');
-  }
- 
-  if(message.content == '/m:heroku deploy') {
-    return message.reply('ERR! Deplot for automatic!(Use ad_)Total:1/Done:0/Fail0');
-  }
-  
-  if(message.content == '/m:help') {
-    return message.reply('(Onley USE ad)메시지가 embed로 출력합니다.');
-  }
-  
-   if(message.content == '/m:activity') {
-    return message.reply('Automatic deploy activity.');
-  }
-  
   
   if(message.content == '문아 서버') {
     let embed = new Discord.RichEmbed()
@@ -229,7 +200,7 @@ client.on('message', (message) => {
   if(message.content == '문아 임베드') {
     let img = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     let embed = new Discord.RichEmbed()
-      .setTitle('임베드 (DB TEST PASSED) DB를 성공적으로 전송했습니다. PING : 5 ms 미만입니다.')
+      .setTitle('임베드')
       .setURL('http://www.naver.com')
       .setAuthor('! MOON', img, 'http://www.naver.com')
       .setThumbnail(img)
@@ -241,7 +212,7 @@ client.on('message', (message) => {
       .addField('Inline field title', 'Some value here1\nSome value here2\nSome value here3\n')
       .addBlankField()
       .setTimestamp()
-      .setFooter('명령어 및 DB를 성공적으로 불러왔습니다. :white_check_mark: ', img)
+      .setFooter('테스트 TEST', img)
 
     message.channel.send(embed)
   } else if(message.content == '문아 도움') {
@@ -251,9 +222,10 @@ client.on('message', (message) => {
       {name: '문아 핑', desc: '현재 핑 상태'},
       {name: '문아 임베드', desc: '엠베드 테스트'},
       {name: '문아 공지보내', desc: 'dm으로 전체 embed 형식으로 공지 보내기'},
-      {name: '문아 청소', desc: '텍스트 지움'},
+      {name: '문아 청소해', desc: '텍스트 지움'},
       {name: '문아 초대코드', desc: '해당 채널의 초대 코드 표기'},
       {name: '문아 서버', desc: '서버 정보 표시'},
+      {name: '문아 문이봇초대', desc: '봇 초대링크'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
@@ -262,11 +234,6 @@ client.on('message', (message) => {
       .setFooter(`돈줘어`)
       .setTimestamp()
 
-      commandList.forEach(x => {
-        commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
-      });
-  
-      embed.addField('Commands: ', commandStr); 
       message.channel.send(embed)
   } else if(message.content == '문아 자판기') {
     let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
@@ -288,7 +255,9 @@ client.on('message', (message) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
     });
 
-    
+    embed.addField('Commands: ', commandStr);
+
+    message.channel.send(embed)
   } else if(message.content == '!초대코드2') {
     client.guilds.array().forEach(x => {
       x.channels.find(x => x.type == 'text').createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
@@ -324,7 +293,7 @@ client.on('message', (message) => {
         .setFooter(`! MOON#2020`)
         .setTimestamp()
   
-      embed.addField('대충 할말', contents);
+      embed.addField('Split 총판샵: ', contents);
   
       message.member.guild.members.array().forEach(x => {
         if(x.user.bot) return;
@@ -391,7 +360,7 @@ client.on('message', (message) => {
 
 function checkPermission(message) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-    message.channel.send(`<@${message.author.id}> ` + "관리자 권한 필요함 ㅇㅇ")
+    message.channel.send(`<@${message.author.id}> ` + "명령어를 수행할 관리자 권한을 소지하고 있지않습니다.")
     return true;
   } else {
     return false;
