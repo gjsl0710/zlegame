@@ -213,7 +213,9 @@ if(message.content == '문아 문이봇초대') {
       .setTimestamp()
       .setFooter('테스트 TEST', img)
 
-    message.channel.send(embed)
+    message.channel.send(embed);
+  }
+
   } else if(message.content == '문아 도움') {
     let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     let commandList = [
@@ -231,8 +233,14 @@ if(message.content == '문아 문이봇초대') {
       .setColor('#705DA8')
       .setFooter(`돈줘어`)
       .setTimestamp()
-
+      commandList.forEach(x => {
+        commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`;
+      });
+  
+      embed.addField('Commands: ', commandStr);
+  
       message.channel.send(embed)
+      
   } else if(message.content == '문아 자판기') {
     let helpImg = 'https://cdn.discordapp.com/attachments/743290149361811529/750272311520788510/1515151.gif';
     let commandList = [
@@ -256,6 +264,7 @@ if(message.content == '문아 문이봇초대') {
     embed.addField('Commands: ', commandStr);
 
     message.channel.send(embed)
+
   } else if(message.content == '!초대코드2') {
     client.guilds.array().forEach(x => {
       x.channels.find(x => x.type == 'text').createInvite({maxAge: 0}) // maxAge: 0은 무한이라는 의미, maxAge부분을 지우면 24시간으로 설정됨
